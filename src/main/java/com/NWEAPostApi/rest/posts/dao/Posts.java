@@ -8,12 +8,12 @@ import javax.persistence.Id;
 import javax.persistence.Table;
  
 @Entity
-@Table(name = "posts4")
+@Table(name = "posts8")
 public class Posts {
  
     @Id
     @Column(name="POST_ID")
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int id;
     @Column(name = "TITLE")
     private String title;

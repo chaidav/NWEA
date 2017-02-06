@@ -1,0 +1,71 @@
+@font-face {
+    font-family: "Oxygen";
+    src: url("../fonts/Oxygen.otf");
+}
+body{
+	font-family:  'Oxygen';
+	width:100%;
+	margin:0;
+	padding:0;
+}
+#container{
+	width: 80%;
+	margin:10% auto;
+}
+#entryForm>div{
+	display: block;
+	padding-bottom: 20px;
+}
+#entryForm>div>label{
+	display: block;
+	font-size: 20px;
+	font-weight: bold;
+}
+#entryForm>div>input, #entryForm>div>textarea{
+	padding: 10px;
+	border: solid 1px #fff;
+	box-shadow: inset 1px 1px 2px 0 #707070;
+	transition: box-shadow 0.3s;
+}
+#entryForm>div>input:focus,
+#entryForm>div>textarea:focus,
+#entryForm>div>input[type="text"].focus,
+#entryForm>div>textarea.focus {
+	box-shadow: inset 1px 1px 2px 0 #c9c9c9;
+}
+.submit {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: white;
+  background-color: lightGrey;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.submit:hover {background-color: grey}
+
+.submit:active {
+  background-color: grey;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+table{
+	border-collapse: collapse ;
+}
+table td,th{
+	border: 2px solid black;
+}
+table>thead tr{
+	color: white;
+	background: grey;
+	
+}
+table>tbody tr:nth-child(odd){
+	background-color: #f2f2f2;
+}
