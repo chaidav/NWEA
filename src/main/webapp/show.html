@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+	<title>Showing Data</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script>
+
+		$(function() {
+		
+		var entries = [];
+		var dmJSON = "http://localhost:8080/NWEAPostApi/webapi/comment/posts?callback=?";
+		$.getJSON( dmJSON, function(data) {
+		   $.each(data.entries, function(i, f) {
+		      var tblRow = "<tr>" + "<td>" + f.id + "</td>" + "<td>" + f.title + "</td>" + "<td>" + f.body + "</td>" + "</tr>"
+		       $(tblRow).appendTo("table tbody");
+		 });
+
+		});
+		
+		});
+	</script>
+</head>
+<body>
+	 
+	<table border="2" style= "margin: 0 auto;" >
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Title</th>
+          <th>Body</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+      </tbody>
+    </table>
+</body>
+</html>
