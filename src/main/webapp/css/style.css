@@ -59,6 +59,9 @@ table{
 	border-collapse: collapse ;
 }
 table td,th{
+	min-width: 100px;
+	align: center;
+	vertical-align: middle;
 	border: 2px solid black;
 }
 table>thead tr{

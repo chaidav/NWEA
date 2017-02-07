@@ -3,15 +3,18 @@
 <head>
 	<title>Showing Data</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	
 	<script>
 
 		$(function() {
 		
 		var entries = [];
-		var dmJSON = "http://localhost:8080/NWEAPostApi/webapi/comment/posts?callback=?";
+		var dmJSON = "http://localhost:8080/NWEAPostApi/webapi/comment/posts";
 		$.getJSON( dmJSON, function(data) {
-		   $.each(data.entries, function(i, f) {
-		      var tblRow = "<tr>" + "<td>" + f.id + "</td>" + "<td>" + f.title + "</td>" + "<td>" + f.body + "</td>" + "</tr>"
+			var jsonData = JSON.stringify(data);
+		   $.each(data, function() {
+		      var tblRow = "<tr>" + "<td>" + this.id + "</td>" + "<td>" + this.title + "</td>" + "<td>" + this.body + "</td>" + "</tr>"
 		       $(tblRow).appendTo("table tbody");
 		 });
 

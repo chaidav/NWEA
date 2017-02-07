@@ -19,5 +19,6 @@ form.onsubmit = function (e) {
 
   xhr.onloadend = function () {
 	alert("Data send");
+	$('#container').load('show.html');
   };
 };
